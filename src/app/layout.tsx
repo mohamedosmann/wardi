@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import { Inter, Outfit } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const outfit = Outfit({
+  variable: "--font-outfit",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Mohamed Osman | Software Developer & ML Specialist",
+  description: "Portfolio of Mohamed Osman - Expert in Software Development, Machine Learning, and AI-driven solutions.",
+  keywords: ["Software Development", "Machine Learning", "Google Gemini", "Portfolio", "Somali Developer"],
+};
+
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
+      <body className="antialiased">{children}</body>
+    </html>
+  );
+}
+
