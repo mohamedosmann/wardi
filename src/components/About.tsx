@@ -4,69 +4,44 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <section id="about" style={{ padding: "120px 24px", background: "linear-gradient(to bottom, #050505, #0a0a0a)" }}>
-      <div className="container" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "5rem", alignItems: "center" }}>
-        <div style={{ position: "relative", justifySelf: "center" }}>
-          <div 
-            className="mockup-container"
-            style={{ 
-              maxWidth: "400px", 
-              borderRadius: "2rem", 
-              overflow: "hidden",
-              margin: 0,
-              boxShadow: "0 0 40px rgba(255, 255, 255, 0.05)"
-            }}
-          >
-            <div className="mockup-image" style={{ borderRadius: "2rem" }}>
-              <Image 
-                src="/images/profile.jpg" 
-                alt="Mohamed Osman" 
-                width={400} 
-                height={500}
-                style={{ objectFit: "cover", width: "100%", height: "auto", display: "block" }}
-              />
-            </div>
+    <section id="about" style={{ padding: "160px 5%", background: "#FFFFFF", color: "#000000" }}>
+      <div style={{ maxWidth: "1400px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "6rem", alignItems: "start" }}>
+        <div>
+          <div className="badge" style={{ background: "rgba(0, 0, 0, 0.05)", borderColor: "rgba(0, 0, 0, 0.1)", color: "#555555", marginBottom: "2rem" }}>
+            ABOUT ME
           </div>
-          {/* Decorative accents */}
-          <div style={{ position: "absolute", top: "-20px", left: "-20px", width: "60px", height: "60px", borderTop: "2px solid #fff", borderLeft: "2px solid #fff", opacity: 0.2 }} />
-          <div style={{ position: "absolute", bottom: "-20px", right: "-20px", width: "60px", height: "60px", borderBottom: "2px solid #fff", borderRight: "2px solid #fff", opacity: 0.2 }} />
+          <h2 style={{ fontSize: "clamp(3rem, 5vw, 4.5rem)", lineHeight: "1.1", marginBottom: "2rem", color: "#15242E" }}>
+            Built On<br />
+            Innovation,<br />
+            Driven By<br />
+            Precision
+          </h2>
+          <a href="#contact" className="btn-gold" style={{ marginTop: "1rem" }}>
+            Get a free quote
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
         </div>
 
-        <div>
-          <h2 style={{ fontSize: "3rem", fontWeight: "700", marginBottom: "1.5rem", letterSpacing: "-0.04em" }}>
-            Meet <span style={{ opacity: 0.5 }}>Mohamed Osman</span>
-          </h2>
-          <p style={{ color: "var(--text-secondary)", marginBottom: "1.5rem", fontSize: "1.1rem" }}>
-            I am a passionate and self-driven professional with deep expertise in 
-            <span style={{ color: "#fff" }}> software development</span>, 
-            <span style={{ color: "#fff" }}> machine learning</span>, and 
-            <span style={{ color: "#fff" }}> AI-driven solutions</span>.
+        <div style={{ paddingTop: "2rem" }}>
+          <p style={{ fontSize: "1.4rem", fontWeight: "600", color: "#15242E", marginBottom: "2.5rem", lineHeight: "1.4" }}>
+            We are a client-focused development studio dedicated to scaling your vision and delivering clear, results-driven software solutions.
           </p>
-          <p style={{ color: "var(--text-secondary)", fontSize: "1.1rem", marginBottom: "1.5rem", lineHeight: "1.7" }}>
-            My work focuses on integrating modern APIs like Google Gemini to solve real-world challenges. 
-            I conduct impactful research in health, education, and sustainability through technology. 
-            I am highly adaptable, collaborative, and eager to contribute to forward-thinking global projects.
-          </p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", marginTop: "2rem" }}>
-            <div>
-              <p style={{ fontWeight: "700", color: "#fff", marginBottom: "0.5rem" }}>Based in</p>
-              <p style={{ color: "var(--text-secondary)" }}>Mogadishu, Somalia</p>
-            </div>
-            <div>
-              <p style={{ fontWeight: "700", color: "#fff", marginBottom: "0.5rem" }}>Specialization</p>
-              <p style={{ color: "var(--text-secondary)" }}>Software & ML Engineer</p>
-            </div>
+          <div style={{ color: "#555555", fontSize: "1.1rem", lineHeight: "1.8", display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            <p>
+              I am a passionate and self-driven professional with deep expertise in 
+              <strong> software development</strong>, <strong> machine learning</strong>, and 
+              <strong> AI-driven solutions</strong>.
+            </p>
+            <p>
+              With experience across a wide range of technical challenges, we combine strategic thinking with precise execution to guide clients through complex situations with confidence. Our approach is grounded in professionalism, discretion, and a deep commitment to achieving the best possible outcomes—because your project deserves more than code, it deserves craftsmanship.
+            </p>
+            <p>
+              My work focuses on integrating modern APIs like Google Gemini to solve real-world challenges. 
+              I conduct impactful research in health, education, and sustainability through technology. 
+            </p>
           </div>
         </div>
       </div>
-      <style jsx>{`
-        @media (max-width: 900px) {
-          .container {
-            grid-template-columns: 1fr;
-            text-align: center;
-          }
-        }
-      `}</style>
     </section>
   );
 };
